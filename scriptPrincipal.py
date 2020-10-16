@@ -1,10 +1,17 @@
 import csv
 import character 
+from random import *
 
 
 characters_list = []
 
-c1 = character.Character("Jean","Paul",18,"astronaute",100)
 
-characters_list.append(c1)
+with open('characters.csv', newline='') as fichier:
+    a = csv.reader(fichier, delimiter=',', quotechar=',')
+    for row in a:
+        print(', '.join(row))
+        characters_list.append(''.join(row))
+
+
+
 
