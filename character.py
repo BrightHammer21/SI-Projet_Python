@@ -15,6 +15,11 @@ class Character:
         self.profession=profession
         self.boostMoral=boostMoral
 
+
+    #surcharge méthode
+    def __repr__():
+        print(nom+" "+prenom+" "+age+" "+profession+" "+boostMoral)
+
     #Accesseurs et mutateurs
     def getNom():
         return self.nom
