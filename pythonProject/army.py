@@ -22,7 +22,7 @@ class Army:
         self.valeurMorale = newValue
 
     def get_total_moral(self):
-        return self.getValeurMorale()*self.chef.getBoostMoral()
+        return int(self.getValeurMorale())*self.chef.getBoostMoral()
 
 #surcharge méthode
     def __repr__(self):

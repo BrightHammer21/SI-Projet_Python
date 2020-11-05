@@ -9,11 +9,17 @@ characters_list = []
 
 with open('characters.csv', newline='') as fichier:
     a = csv.reader(fichier, delimiter=',', quotechar=',')
+    compteur =0
     for row in a:
-       characters_list.append(character.Character(*row))
+        if compteur!=0:
+            characters_list.append(character.Character(*row))
+        else:
+            compteur = compteur +1
+
 
 valTotal=0
 for charac in characters_list:
+    print(charac.__repr__())
     armee =army.Army(charac,uniform(20.0,100.0))
     valTotal=valTotal+armee.get_total_moral()
 
