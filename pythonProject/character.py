@@ -16,6 +16,7 @@ class Character:
         self.boostMoral=boostMoral
 
 
+
     #surcharge méthode
     def __repr__(self):
         print(self.nom+" "+self.prenom+" "+self.age+" "+self.profession+" "+self.boostMoral)
