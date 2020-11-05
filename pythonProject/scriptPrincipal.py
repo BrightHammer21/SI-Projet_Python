@@ -11,3 +11,4 @@ with open('characters.csv', newline='') as fichier:
     for row in a:
         print(', '.join(row))
         characters_list.append(''.join(row))
+
