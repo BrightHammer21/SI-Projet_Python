@@ -5,7 +5,7 @@ class Character:
     prenom=""
     age=0
     profession=""
-    boostMoral=0
+    boostMoral=0.0
 
     #constructeur
     def __init__(self, nom, prenom, age, profession, boostMoral):

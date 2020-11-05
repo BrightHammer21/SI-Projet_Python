@@ -14,12 +14,12 @@ with open('characters.csv', newline='') as fichier:
 
 valTotal=0
 for charac in characters_list:
-    nb=uniform(20.0,100.0)
-    armee =army.Army(charac,nb)
-    valTotal+nb
+    armee =army.Army(charac,uniform(20.0,100.0))
+    valTotal=valTotal+armee.get_total_moral()
 
 
-print("Valeur totale des armées"+valTotal)
+print("Valeur totale des armées : "+str(valTotal))
+
 valeurMoraleTroupes=np.array([uniform(20.0,100.0),uniform(20.0,100.0),uniform(20.0,100.0),uniform(20.0,100.0),uniform(20.0,100.0)])
 boostMoralTroupe=np.array([uniform(0.1,10.0),uniform(0.1,10.0),uniform(0.1,10.0),uniform(0.1,10.0),uniform(0.1,10.0)])
 
