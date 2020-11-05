@@ -21,3 +21,9 @@ class Army:
     def setValeurmorale(self, newValue):
         self.valeurMorale = newValue
 
+    def get_total_moral(self):
+        return self.getValeurMorale()*self.chef.getBoostMoral()
+
+#surcharge méthode
+    def __repr__(self):
+        print(self.chef.__repr__()+" \nValeur morale : "+self.valeurMorale+" \nTotal moral"+self.get_total_moral())
