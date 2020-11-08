@@ -1,6 +1,7 @@
 import csv
 import character
 import army
+import EtLogique
 from random import *
 import numpy as np
 
@@ -31,3 +32,8 @@ boostMoralTroupe=np.array([uniform(0.1,10.0),uniform(0.1,10.0),uniform(0.1,10.0)
 
 print(valeurMoraleTroupes)
 print(boostMoralTroupe)
+
+
+et = EtLogique.EtLogique()
+et.calcul()
+et.afficherListe()
