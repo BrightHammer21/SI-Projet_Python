@@ -29,6 +29,6 @@ class EtLogique:
         for e in self.listeValeurErreur:
             print(str(e) + " , ")
 
-        #plt.plot(self.listeValeurErreur)
-        plt.matshow(self.listeValeurErreur)
+        plt.plot(self.listeValeurErreur)
+        #plt.matshow(self.listeValeurErreur)
         plt.show()
