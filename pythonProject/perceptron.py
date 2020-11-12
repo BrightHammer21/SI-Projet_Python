@@ -25,5 +25,13 @@ class perceptron:
         else:
             res=1
 
-
         return res
+
+    def train(self, listeInputs, listeResult):
+
+        for i in range(0, self.nbEpochs):
+            for j in range(0, self.listeInputs):
+                res = self.predict(self.listeInputs[j].__getitem__(0), self.listeInputs[j].__getitem__(1))
+                if res == 1:
+                    self.w1 = self.w1 + self.biais *(self.listeResult[j] - res) * self.listeInputs[j].__getitem__(0)
+                    self.w2 = self.w2 + self.biais *(self.listeResult[j] - res) * self.listeInputs[j].__getitem__(1)
