@@ -1,4 +1,7 @@
 import matplotlib.pyplot as plt
+
+import numpy as np
+
 class EtLogique:
     def __init__(self):
         self.listeInput = [[0, 0], [0, 1], [1, 0], [1, 1]]
@@ -6,7 +9,7 @@ class EtLogique:
 
     def calcul(self):
         valErreurTotal = 0
-        self.listeValeurErreur =[[0 for i in range(10)] for i in range(10)]
+        self.listeValeurErreur =np.zeros((10,10))
 
         for w1 in range(-5, 5):
             for w2 in range(-5, 5):
@@ -29,5 +32,5 @@ class EtLogique:
            print(str(e) + " , ")
 
         #plt.plot(self.listeValeurErreur)
-        plt.matshow(self.listeValeurErreur)
+        plt.imshow(self.listeValeurErreur)
         plt.show()

@@ -19,7 +19,7 @@ class perceptron:
 
     def predict(self, input1, input2):
         res = 0
-        T = input1 * self.w1 +input2 * self.w2
+        T = input1 * self.w1 +input2 * self.w2 + self.biais * self.w0
         if T<=0:
             res=0
         else:
@@ -35,3 +35,7 @@ class perceptron:
                 if res == 1:
                     self.w1 = self.w1 + self.biais *(self.listeResult[j] - res) * self.listeInputs[j].__getitem__(0)
                     self.w2 = self.w2 + self.biais *(self.listeResult[j] - res) * self.listeInputs[j].__getitem__(1)
+
+
+    def afficher(self):
+        print(self.w1+" "+self.w2)
