@@ -1,6 +1,7 @@
 import csv
 import character
 import army
+import perceptron
 import EtLogique
 from random import *
 import numpy as np
@@ -23,7 +24,7 @@ for charac in characters_list:
     armee =army.Army(charac,uniform(20.0,100.0))
     valTotal=valTotal+armee.get_total_moral()
 
-
+"""
 print("Valeur totale des armées : "+str(valTotal))
 
 valeurMoraleTroupes=np.array([uniform(20.0,100.0),uniform(20.0,100.0),uniform(20.0,100.0),uniform(20.0,100.0),uniform(20.0,100.0)])
@@ -37,3 +38,13 @@ print(boostMoralTroupe)
 et = EtLogique.EtLogique()
 et.calcul()
 et.afficherListe()
+
+nbIpputs, nbEpochs, learningRate, listeInput, listeResult
+"""
+
+listeInput = [[0, 0], [0, 1], [1, 0], [1, 1]]
+listeResult = [0, 0, 0, 1]
+
+percept = perceptron.perceptron(2,5,1,listeInput,listeResult)
+percept.train()
+percept.afficher()

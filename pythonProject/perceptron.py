@@ -27,10 +27,10 @@ class perceptron:
 
         return res
 
-    def train(self, listeInputs, listeResult):
+    def train(self):
 
         for i in range(0, self.nbEpochs):
-            for j in range(0, self.listeInputs):
+            for j in range(0, len(self.listeInputs)):
                 res = self.predict(self.listeInputs[j].__getitem__(0), self.listeInputs[j].__getitem__(1))
                 if res == 1:
                     self.w1 = self.w1 + self.learningRate *(self.listeResult[j] - res) * self.listeInputs[j].__getitem__(0)
@@ -38,4 +38,4 @@ class perceptron:
 
 
     def afficher(self):
-        print(self.w1+" "+self.w2)
+        print(str(self.w1)+" "+str(self.w2))
