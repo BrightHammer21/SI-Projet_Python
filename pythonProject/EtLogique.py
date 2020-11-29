@@ -13,6 +13,7 @@ class EtLogique:
 
         for w1 in range(-10, 10,1):
             for w2 in range(-10, 10,1):
+                valErreurTotal = 0
                 for i in range(0, 4):
                     T = self.listeInput[i].__getitem__(0) * w1 + self.listeInput[i].__getitem__(1) * w2
 
@@ -23,10 +24,7 @@ class EtLogique:
 
                     erreur = 0.5 * (y - self.listeResult[i])**2
                     valErreurTotal = valErreurTotal + erreur
-                    self.listeValeurErreur[w1][w2] = erreur
-
-                #self.listeValeurErreur[w1+10][w2+10] = (np.sum(0.5*((((node[0]*w1)+(node[1]*w2))>0)-self.listeResult[node[0]*2+node[1]])**2 for node in self.listeInput))
-
+                self.listeValeurErreur[w1+10][w2+10] = valErreurTotal
 
     def afficherListe(self):
 
