@@ -45,6 +45,5 @@ nbIpputs, nbEpochs, learningRate, listeInput, listeResult
 listeInput = [[0, 0], [0, 1], [1, 0], [1, 1]]
 listeResult = [0, 0, 0, 1]
 
-percept = perceptron.perceptron(2,5,1,listeInput,listeResult)
+percept = perceptron.perceptron(2, 50, 0.01, listeInput, listeResult)
 percept.train()
-percept.afficher()
