@@ -74,8 +74,7 @@ modele.fit(listeInput,listeOutput, epochs=8000, batch_size=8)
 
 
 #PREDICTION
-valeursAAvoir =  np.array(listeInput)
-predictions = modele.predict(valeursAAvoir)
+predictions = modele.predict(listeInput)
 print("prédiction : ")
 #print([v[0] for v in predictions])
 
